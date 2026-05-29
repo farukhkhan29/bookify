@@ -1,4 +1,4 @@
-# 📅 BookFlow — Appointment Booking System
+# 📅 Bookify — Appointment Booking System
 
 A full-featured, self-hosted appointment booking system built with PHP and MySQL. Includes a beautiful admin dashboard, embeddable booking form, WhatsApp notifications, Mailgun email, Google Fonts, and full branding customization.
 
@@ -237,4 +237,4 @@ MIT — free to use, modify, and distribute.
 
 ---
 
-<p align="center"><strong>BookFlow</strong> · Simple. Beautiful. Self-hosted.</p>
+<p align="center"><strong>Bookify</strong> · Simple. Beautiful. Self-hosted.</p>
