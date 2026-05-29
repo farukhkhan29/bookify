@@ -1,0 +1,27 @@
+# ── Sensitive config (NEVER commit real credentials) ──
+includes/config.php
+
+# ── Uploaded assets ──
+assets/uploads/*
+assets/img/*
+!assets/uploads/.htaccess
+!assets/uploads/.gitkeep
+!assets/img/.gitkeep
+
+# ── OS & editor junk ──
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
+
+# ── One-time scripts (delete after use) ──
+migrate.php
+reset-password.php
+fix-redirect.php
+
+# ── PHP dependencies (if added later) ──
+vendor/
+composer.lock

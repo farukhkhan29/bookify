@@ -1,0 +1,31 @@
+Options -Indexes
+RewriteEngine On
+
+# Block direct access to includes
+RewriteRule ^includes/ - [F,L]
+
+# --- Admin clean URLs ---
+# /admin → /admin/index.php
+RewriteRule ^admin/?$ admin/index.php [L,QSA]
+RewriteRule ^admin/login/?$ admin/login.php [L,QSA]
+RewriteRule ^admin/logout/?$ admin/logout.php [L,QSA]
+RewriteRule ^admin/appointments/?$ admin/appointments.php [L,QSA]
+RewriteRule ^admin/services/?$ admin/services.php [L,QSA]
+RewriteRule ^admin/slots/?$ admin/slots.php [L,QSA]
+RewriteRule ^admin/calendar/?$ admin/calendar.php [L,QSA]
+RewriteRule ^admin/form-builder/?$ admin/form-builder.php [L,QSA]
+RewriteRule ^admin/settings/?$ admin/settings.php [L,QSA]
+RewriteRule ^admin/embed/?$ admin/embed.php [L,QSA]
+
+# --- Public booking form ---
+RewriteRule ^book/?$ embed/booking-form.php [L,QSA]
+
+# --- API ---
+RewriteRule ^api/slots/?$ api/slots.php [L,QSA]
+
+# --- Widget JS (keep as-is, just no .php) ---
+RewriteRule ^embed/widget\.js$ embed/widget.js [L]
+
+# --- Pass query string through ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
